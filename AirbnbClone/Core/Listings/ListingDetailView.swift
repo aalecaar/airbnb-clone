@@ -6,12 +6,30 @@
 //
 
 import SwiftUI
+import MapKit
 
 struct ListingDetailView: View {
+    @Environment(\.dismiss) private var dismiss
     var body: some View {
         ScrollView {
-            ListingImageCarouselView()
-            .frame(height: 320)
+                ListingImageCarouselView()
+                    .frame(height: 320)
+                    .overlay(alignment: .topLeading) {
+                        Button {
+                            dismiss()
+                        } label: {
+                            Image(systemName: "chevron.left")
+                                .foregroundStyle(.black)
+                                .background {
+                                    Circle()
+                                        .fill(.white)
+                                        .frame(width: 36, height: 36)
+                                }
+                                .padding(32)
+
+                        }
+                    }
+            
             
             VStack(alignment: .leading, spacing: 8) {
                 Text("Miami Villa")
@@ -36,13 +54,13 @@ struct ListingDetailView: View {
                     
                 }
                 .font(.caption)
-
+                
             }
             .frame(maxWidth: .infinity, alignment: .leading)
             .padding(12)
             
             Divider()
-             
+            
             HStack {
                 VStack(alignment: .leading) {
                     Text("Entire villa hosted by")
@@ -53,7 +71,7 @@ struct ListingDetailView: View {
                         .font(.headline)
                         .fontWeight(.semibold)
                         .padding(.bottom, 2)
-
+                    
                     Text("4 guests - 4 bedrooms - 6 beds - 3 baths")
                         .font(.caption)
                 }
@@ -85,7 +103,7 @@ struct ListingDetailView: View {
                             .foregroundStyle(.secondary)
                     }
                 }
-
+                
                 HStack {
                     Image(systemName: "person.fill.checkmark")
                         .font(.title3)
@@ -98,13 +116,113 @@ struct ListingDetailView: View {
                             .font(.subheadline)
                             .foregroundStyle(.secondary)
                     }
-
+                    
                 }
-
+                
             }
             .frame(maxWidth: .infinity)
             .padding(12)
-
+            
+            Divider()
+            
+            VStack(alignment: .leading) {
+                Text("Where you'll sleep")
+                    .font(.headline)
+                
+                ScrollView(.horizontal, showsIndicators: false) {
+                    HStack(spacing: 16) {
+                        ForEach(0..<5) { bedroom in
+                            VStack {
+                                Image(systemName: "bed.double")
+                                
+                                Text("Bedroom \(bedroom)")
+                            }
+                            .frame(width: 132, height: 100)
+                            .overlay {
+                                RoundedRectangle(cornerRadius: 12)
+                                    .stroke(lineWidth: 1)
+                                    .foregroundStyle(.secondary)
+                            }
+                        }
+                    }
+                }
+            }
+            .padding(12)
+            
+            Divider()
+            
+            VStack(alignment: .leading, spacing: 16) {
+                Text("What this place offers")
+                    .font(.headline)
+                ForEach(0..<4) { _ in
+                    HStack(spacing: 12) {
+                        Image(systemName: "wifi")
+                        
+                        Text("Wifi")
+                        
+                        Spacer()
+                    }
+                }
+                
+            }
+            .padding(12)
+            
+            Divider()
+            
+            VStack {
+                HStack {
+                    Text("Where you'll be")
+                        .font(.headline)
+                    Spacer()
+                }
+                
+                Map()
+                    .frame(width: .infinity,height: 200)
+                    .clipShape(.rect(cornerRadius: 12))
+            }
+            .padding(12)
+            
+            
+        }
+        .ignoresSafeArea()
+        .padding(.bottom, 90)
+        .overlay(alignment: .bottom) {
+            VStack {
+                Divider()
+                    .padding(.bottom)
+                
+                HStack {
+                    VStack(alignment: .leading) {
+                        Text("$800")
+                            .font(.subheadline)
+                            .fontWeight(.semibold)
+                        
+                        Text("Total before taxes")
+                            .font(.caption)
+                        
+                        Text("Nov 23 - 30")
+                            .font(.footnote)
+                            .fontWeight(.semibold)
+                            .underline()
+                    }
+                    
+                    Spacer()
+                    
+                    Button {
+                        
+                    } label: {
+                        Text("Reserve")
+                            .foregroundStyle(.white)
+                            .font(.subheadline)
+                            .fontWeight(.semibold)
+                            .frame(width: 140, height: 40)
+                            .background(.pink)
+                            .clipShape(.rect(cornerRadius: 8))
+                    }
+                }
+                .padding(.horizontal, 32)
+            }
+            .background(.white)
         }
     }
 }
