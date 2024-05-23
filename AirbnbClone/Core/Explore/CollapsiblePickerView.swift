@@ -1,5 +1,5 @@
 //
-//  CollapsablePickerView.swift
+//  CollapsiblePickerView.swift
 //  AirbnbClone
 //
 //  Created by xx on 23/05/24.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct CollapsablePickerView: View {
+struct CollapsiblePickerView: View {
     let title: String
     let description: String
     
@@ -24,14 +24,9 @@ struct CollapsablePickerView: View {
                     .fontWeight(.semibold)
             }
         }
-//        .padding()
-//        .background(.white)
-//        .clipShape(.rect(cornerRadius: 12))
-//        .padding()
-//        .shadow(radius: 10 )
     }
 }
 
 #Preview {
-    CollapsablePickerView(title: "When", description: "Add guests")
+    CollapsiblePickerView(title: "When", description: "Add guests")
 }

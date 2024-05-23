@@ -17,7 +17,7 @@
 		0E6BBD572BFD680500C0D54F /* ListingDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E6BBD562BFD680500C0D54F /* ListingDetailView.swift */; };
 		0E6BBD5A2BFD69F200C0D54F /* ListingImageCarouselView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E6BBD592BFD69F200C0D54F /* ListingImageCarouselView.swift */; };
 		0EA465832BFEBBA700C31D4B /* DestinationSearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EA465822BFEBBA700C31D4B /* DestinationSearchView.swift */; };
-		0EFD20AB2BFFB7150061BBD1 /* CollapsablePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EFD20AA2BFFB7150061BBD1 /* CollapsablePickerView.swift */; };
+		0EFD20AB2BFFB7150061BBD1 /* CollapsiblePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EFD20AA2BFFB7150061BBD1 /* CollapsiblePickerView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,7 +32,7 @@
 		0E6BBD562BFD680500C0D54F /* ListingDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListingDetailView.swift; sourceTree = "<group>"; };
 		0E6BBD592BFD69F200C0D54F /* ListingImageCarouselView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListingImageCarouselView.swift; sourceTree = "<group>"; };
 		0EA465822BFEBBA700C31D4B /* DestinationSearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DestinationSearchView.swift; sourceTree = "<group>"; };
-		0EFD20AA2BFFB7150061BBD1 /* CollapsablePickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollapsablePickerView.swift; sourceTree = "<group>"; };
+		0EFD20AA2BFFB7150061BBD1 /* CollapsiblePickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollapsiblePickerView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -134,7 +134,7 @@
 				0E35BB0D2BFAB3590048C129 /* ExploreView.swift */,
 				0EA465822BFEBBA700C31D4B /* DestinationSearchView.swift */,
 				0E6BBD522BFD1CB000C0D54F /* SearchAndFilterBarView.swift */,
-				0EFD20AA2BFFB7150061BBD1 /* CollapsablePickerView.swift */,
+				0EFD20AA2BFFB7150061BBD1 /* CollapsiblePickerView.swift */,
 			);
 			path = Explore;
 			sourceTree = "<group>";
@@ -262,7 +262,7 @@
 				0E6BBD512BFD0C9F00C0D54F /* ListingItemView.swift in Sources */,
 				0E6BBD572BFD680500C0D54F /* ListingDetailView.swift in Sources */,
 				0E35BAF32BFAAF240048C129 /* AirbnbCloneApp.swift in Sources */,
-				0EFD20AB2BFFB7150061BBD1 /* CollapsablePickerView.swift in Sources */,
+				0EFD20AB2BFFB7150061BBD1 /* CollapsiblePickerView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

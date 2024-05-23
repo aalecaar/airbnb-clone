@@ -44,6 +44,7 @@ struct SearchAndFilterBarView: View {
     }
 }
 
+
 #Preview {
     SearchAndFilterBarView()
 }
