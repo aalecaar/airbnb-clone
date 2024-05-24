@@ -12,6 +12,7 @@ struct AirbnbCloneApp: App {
     var body: some Scene {
         WindowGroup {
             AirbnbCloneView()
+                .preferredColorScheme(.light)
         }
     }
 }

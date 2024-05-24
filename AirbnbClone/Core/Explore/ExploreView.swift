@@ -34,6 +34,7 @@ struct ExploreView: View {
                     }
                 }
                 .padding()
+                .scrollIndicators(.hidden)
                 .navigationDestination(for: Int.self) { listing in
                     ListingDetailView()
                         .navigationBarBackButtonHidden()
