@@ -184,12 +184,12 @@ struct ListingDetailView: View {
             
             
         }
+        .toolbar(.hidden, for: .tabBar)
         .ignoresSafeArea()
         .padding(.bottom, 90)
         .overlay(alignment: .bottom) {
             VStack {
-                Divider()
-                    .padding(.bottom)
+             
                 
                 HStack {
                     VStack(alignment: .leading) {
